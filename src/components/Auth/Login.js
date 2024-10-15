@@ -35,39 +35,40 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <form onSubmit={handleSubmit} className="p-6 bg-white rounded shadow-md w-80">
-        <h2 className="text-2xl font-bold mb-6">Login</h2>
-        {error && <p className="text-red-500">{error}</p>}
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Email</label>
-          <input
-            type="email"
-            className="w-full p-2 border border-gray-300 rounded mt-1"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700">Password</label>
-          <input
-            type="password"
-            className="w-full p-2 border border-gray-300 rounded mt-1"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter your password"
-          />
-        </div>
-        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Login</button>
-        <p className="mt-4 text-sm">
-          <Link to="/forgot-password" className="text-blue-500">Forgot your password?</Link>
-        </p>
-        <p className="mt-4 text-sm">
-          Don’t have an account? <Link to="/signup" className="text-blue-500">Sign Up</Link>
-        </p>
-      </form>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+  <form onSubmit={handleSubmit} className="p-6 bg-white rounded shadow-md w-full max-w-md">
+    <h2 className="text-2xl font-bold mb-6">Login</h2>
+    {error && <p className="text-red-500">{error}</p>}
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-700">Email</label>
+      <input
+        type="email"
+        className="w-full p-2 border border-gray-300 rounded mt-1"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email"
+      />
     </div>
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-700">Password</label>
+      <input
+        type="password"
+        className="w-full p-2 border border-gray-300 rounded mt-1"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Enter your password"
+      />
+    </div>
+    <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Login</button>
+    <p className="mt-4 text-sm">
+      <Link to="/forgot-password" className="text-blue-500">Forgot your password?</Link>
+    </p>
+    <p className="mt-4 text-sm">
+      Don’t have an account? <Link to="/signup" className="text-blue-500">Sign Up</Link>
+    </p>
+  </form>
+</div>
+
   );
 };
 
